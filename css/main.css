@@ -116,7 +116,10 @@ body {
         body .right-content .row .CV .file-cont p {
           color: #333;
           margin-top: 2vh;
-          transition: all .3s ease; }
+          transition: all .3s ease;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden; }
         body .right-content .row .CV .file-cont input {
           display: none; }
         body .right-content .row .CV .file-cont:hover {

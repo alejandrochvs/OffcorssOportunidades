@@ -149,6 +149,9 @@ body {
                         color: #333;
                         margin-top: 2vh;
                         transition: all .3s ease;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
                     }
                     input {
                         display: none;
