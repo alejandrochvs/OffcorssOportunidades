@@ -7,5 +7,8 @@ $(function () {
     $('#inputFile').change(function () {
         $('#loadStatus').html('Enviar "' + 
             $(this).val().split('\\').reverse()[0] + '"');
+    });
+    $('input').keyup(function(e){
+        console.log(e.keyCode);
     })
 })
