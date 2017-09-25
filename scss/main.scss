@@ -1,0 +1,176 @@
+$mainC: #035197;
+$dangerC: lightcoral;
+$warnC: #faebcc;
+$successC: lightgreen;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: white;
+    .row {
+        margin: 0;
+    }
+    button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        &.btn-primary {
+            background: lighten($mainC, 10%);
+            border: none;
+            outline: none;
+            &:hover {
+                background: $mainC;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+    .links {
+        background: $mainC;
+        padding: 1%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        a {
+            color: white;
+            border-right: solid 1px white;
+            padding: 0.5%;
+            white-space: nowrap;
+            width: auto;
+            transition: all .2s ease;
+            &:hover {
+                color: darken(white, 10%);
+            }
+        }
+    }
+    .left-nav {
+        background: white;
+        padding-left: 0;
+        padding-right: 0;
+        .logo {
+            padding: 5%;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: $mainC;
+            margin: 0;
+            padding: 5%;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            h2 {
+                color: lighten($mainC, 50%);
+                font-weight: 100;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    margin-bottom: 1vh;
+                    a {
+                        padding: 2%;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .right-content {
+        padding: 3%;
+        padding-top: 0;
+        background: white;
+        min-height: 90vh;
+        .row {
+            .page-title {
+                font-weight: 100;
+                text-align: center;
+                color: white;
+                background: $mainC;
+                padding: 2.5%;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin-bottom: 5vh;
+            }
+            .title {
+                font-weight: 100;
+                color: $mainC;
+            }
+            .desc {
+                padding: 0;
+                padding-left: 30px;
+                margin-bottom: 5vh;
+            }
+            .inputs {
+                h6 {
+                    font-weight: 100;
+                    padding: 0;
+                }
+                input {
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 3px lighten($mainC, 15%);
+                    transition: all .3s ease;
+                    padding: 2%;
+                    border-radius: 5px;
+                    font-weight: 500;
+                    margin-bottom: 2vh;
+                    &:active,
+                    &:focus {
+                        border-color: $mainC;
+                        background: whitesmoke;
+                    }
+                    &.success {
+                        border-color: darken($successC, 30%);
+                        color: darken($successC, 40%);
+                        background: $successC;
+                    }
+                    &.danger {
+                        border-color: darken($dangerC, 30%);
+                        color: darken($dangerC, 40%);
+                        background: $dangerC;
+                    }
+                    &.warning {
+                        border-color: darken($warnC, 30%);
+                        color: darken($warnC, 40%);
+                        background: $warnC;
+                    }
+                }
+            }
+            .CV {
+                padding: 2.5%;
+                .file-cont {
+                    background: whitesmoke;
+                    padding: 5%;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    color: red;
+                    transition: all .3s ease;
+                    border: solid 1px lightgray;
+                    height: 100%;
+                    p {
+                        color: #333;
+                        margin-top: 2vh;
+                        transition: all .3s ease;
+                    }
+                    input {
+                        display: none;
+                    }
+                    &:hover {
+                        background: lighten($mainC, 60%);
+                        border-color: lighten($mainC, 30%);
+                        color: lighten($mainC, 30%);
+                        p {
+                            color: lighten($mainC, 30%);
+                        }
+                    }
+                }
+            }
+            .send {
+                padding: 5%;
+            }
+        }
+    }
+    footer {
+        padding: 2.5%;
+        background: $mainC;
+        color: white;
+    }
+}
